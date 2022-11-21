@@ -13,6 +13,8 @@
         - Framework
 6.0 - Components: specific designed components
         - Navagation
+        - Hero
+        - Footer
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
         - Alignment	
 --------------------------------------------------------------*/
@@ -35,6 +37,8 @@
 
 html {
         font-size: 1rem;
+        line-height: 1.5em;
+        text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -259,13 +263,97 @@ a {
         text-transform: uppercase;
 } 
 
-body {
+img,
+#about nav ul,
+#about h2,
+#about li,
+#mission {
+        text-align: left;
+}
+
+header nav ul {
         text-align: center;
+}
+
+#home p:first-child,
+#home div:first-child {
+        margin: 0;
+}
+
+#hero-home p:last-child a,
+main p a {
+        background-color:#4e9374;
+        padding: 0.75em;
+        border-radius: 8em;
+}
+
+#hero-home p:last-child a:hover,
+main p a:hover {
+        background-color: #1d6d49;
+}
+
+
+h2,
+#about nav ul,
+blockquote footer p {
+        color: #BDBDBD;
+}
+
+h1,
+a,
+#hero-home p,
+main p a {
+        color: #fff;
 }
 
 
 
-#home {
+
+/* ----- NAVAGATION ----- */
+header li,
+footer li {
+        display: inline-block;
+        margin-right: 1.25em;
+}
+
+header nav li:last-child a{
+        border: 1px #fff solid;
+        padding: 0.5em;
+        border-radius: 8em;
+}
+
+header nav li:last-child a:hover {
+        background-color: #fff;
+        color: #4e9374;
+}
+
+
+header nav a:hover,
+address a:hover {
+        border-bottom: 1px #fff solid;
+        padding-bottom: 0.25em;
+}
+
+a {
+        text-decoration: none;
+        font-size: 0.75rem;
+}
+
+li {
+        list-style-type: none;
+}
+
+ul {
+        padding-left: 0;
+}
+
+
+
+
+
+
+/* ----- HERO ----- */
+#hero-home {
         background: url(../img/hero-snow-mountains.jpg) no-repeat center;
         -moz-background-size: cover;
         -webkit-background-size: cover;
@@ -275,7 +363,7 @@ body {
         padding-bottom: 10em; 
 }
 
-#about {
+#hero-about {
         background: url(../img/hero-grass-mountains.jpg) no-repeat center;
         -moz-background-size: cover;
         -webkit-background-size: cover;
@@ -285,7 +373,7 @@ body {
         padding-bottom: 10em; 
 }
 
-#take-action {
+#hero-take-action {
         background: url(../img/hero-tall-trees.jpg) no-repeat center;
         -moz-background-size: cover;
         -webkit-background-size: cover;
@@ -295,10 +383,39 @@ body {
         padding-bottom: 10em; 
 }
 
-/* ----- NAVAGATION ----- */
 
 
 
+/* ----- FOOTER ----- */
+
+footer {
+        background-color: #1d6d49; 
+        padding: 0.75em 0;
+}
+
+footer > div:first-child {
+        background-color: #4e9374;
+        padding: 0.75em 0;
+}       
+
+
+
+
+
+
+@media screen and (min-width: 768px) {     /* ----- MEDIUM ----- */
+        
+}
+
+@media screen and (min-width: 1024px) {     /* ----- LARGE ----- */
+        #about p {
+                text-align: left;
+        }
+
+        header nav ul {
+                text-align: right;
+        }
+}
 
 
 /*--------------------------------------------------------------
