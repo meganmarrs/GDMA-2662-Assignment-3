@@ -12,6 +12,7 @@
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
         - Framework
 6.0 - Components: specific designed components
+        - Navagation
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
         - Alignment	
 --------------------------------------------------------------*/
@@ -33,37 +34,33 @@
 }
 
 html {
-        /* ----- set font-size ----- */
+        font-size: 1rem;
 }
 
 @media screen and (min-width: 768px) {
-        html {
-
-        }
+       
 }
 
 @media screen and (min-width: 1024px) {
-        html {
-
-        }
+        
 }
 /*--------------------------------------------------------------
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 
 
+/* ----- TYPOGRAPHY ----- */ 
+
+
+
 
 
 @media screen and (min-width: 768px) {
-        html {
-
-        }
+        
 }
 
 @media screen and (min-width: 1024px) {
-        html {
-
-        }
+        
 }
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -254,6 +251,53 @@ html {
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
+
+header p b,
+h1,
+h2,
+a {
+        text-transform: uppercase;
+} 
+
+body {
+        text-align: center;
+}
+
+
+
+#home {
+        background: url(../img/hero-snow-mountains.jpg) no-repeat center;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;  
+        padding-bottom: 10em; 
+}
+
+#about {
+        background: url(../img/hero-grass-mountains.jpg) no-repeat center;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;  
+        padding-bottom: 10em; 
+}
+
+#take-action {
+        background: url(../img/hero-tall-trees.jpg) no-repeat center;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;  
+        padding-bottom: 10em; 
+}
+
+/* ----- NAVAGATION ----- */
+
+
 
 
 

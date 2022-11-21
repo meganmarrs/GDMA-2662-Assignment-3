@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <header>
-        <div>
-            <div class="wrapper row">
+    <header id="about"> <!--BG HERO-->
+        <div class="wrapper">
+            <div class="row">
                 <div>
-                    <img src="img/logo-bedford.png" alt="bedford">
+                    <a href="/index.html"><img src="img/logo-bedford.png" alt="Bedford Foundation" width="150"></a>
                 </div>
                 <nav>
                     <ul>
@@ -27,48 +27,82 @@
                     </ul>
                 </nav>
             </div>
-        </div>
 
-        <div>
-            <div></div> <!--IMG-->
-            <section class="wrapper">
-                <div>
-                    <h1><b>What we do</b> </h1> <!--h1 b UPPERCASE-->
-                </div>
-            </section>
+            <h1><b>What we do</b> </h1> <!--h1 b UPPERCASE-->
         </div>
     </header>
 
-    <main class="wrapper row">
-        <div>
-            <h4><i>About</i></h4>
-            <nav>
-                <ul>
-                    <li><a href=""></a>What we do</li>
-                    <li><a href=""></a>Mission</li>
-                    <li><a href=""></a>Achievements</li>
-                </ul>
-            </nav>
-        </div>
-
-        <div>
+    <main class="wrapper row"> 
+        <nav class="col-sm-12 col-lg-4"> <!--DEFINE md, FIX-->
+            <ul>
+                <li><i>About</i></li>  <!--color dark green, lowercase-->
+                <li><a href="">What we do</a></li> <!--UPPERCASE-->
+                <li><a href="#">Mission</a></li> <!--UPPERCASE-->
+                <li><a href="">Achievements</a></li> <!--UPPERCASE-->
+            </ul>
+        </nav>
+    
+        <div class=" col-sm-12 col-lg-8">
+            <p>Since 1950, we have led the effort to permanently protect nearly 110 million acres of wilderness. We have been at the forefront of nearly every major public lands victory.</p>
             <section>
                 <header>
-                    <h2>Since 1950, we have led the effort to permanently protect nearly 110 million acres of wilderness. We have been at the forefront of nearly every major public lands victory.</h2>
+                    <h2>Our Mission</h2> <!--UPPERCASE-->
                 </header>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque enim non augue fringilla, sit amet vehicula orci faucibus. Maecenas luctus erat lobortis neque molestie, in scelerisque arcu sollicitudin. Donec blandit, arcu a dapibus iaculis, velit nisi luctus libero, eu maximus ligula diam eget ante. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed quis enim nibh</p>
+            </section>
+
+            <blockquote> <!--Border-Top & Border-Bottom-->
+                <p></p>
+                <p>Bedford has helped accomplish over 200 of its partners' major conservation goals. They inspire everyone to care for the planet.</p>
+                <footer>
+                    <p>&mdash; John Smith, Nature Conservancy Magazine</p>
+                </footer>
+            </blockquote>
+
+            <section>
+                <header>
+                    <h2>Our Achievements</h2> <!--UPPERCASE-->
+                </header>
+                <div class="row">
+                    <div class="col-sm-12 col-lg-4"> <!--DEFINE md-->
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-lg-4"> <!--DEFINE md-->
+                        <ul>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
         </div>
-
-        
-
-
     </main>
 
-
-
-
-    
-    
+    <footer> <!--BG Color Dark-Green-->
+        <div> <!--BG Color Light-Green--> 
+            <div class="wrapper">
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="_blank"><span class="fa-brands fa-square-facebook"></span><span class="sr-only">Facebook</span></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><span class="fa-brands fa-square-instagram"></span><span class="sr-only">Instagram</span></a></li>
+                    <li><a href="https://twitter.com/" target="_blank"><span class="fa-brands fa-square-twitter"></span><span class="sr-only">Twitter</span></a></li>  
+                </ul>
+            </div>
+        </div>
+ 
+        <address class="wrapper"> <!--UPPERCASE-->
+            <ul>
+                <li><a href="https://www.google.com/maps/place/459+Broadway,+New+York,+NY+10013/data=!4m2!3m1!1s0x89c2598bd3fc4031:0x48b829f544b1ce3f?sa=X&ved=2ahUKEwj_1LCvw_D6AhXcj4kEHcAtAzIQ8gF6BAgVEAE" target="_blank">459 Broadway, New York</a></li>
+                <li><a href="tel:+12125550123">(212)555-0123</a></li> 
+                <li><a href="mailto:template@gmail.com">template@gmail.com</a><br></li> 
+            </ul>
+        </address>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="js/functions.js"></script>
