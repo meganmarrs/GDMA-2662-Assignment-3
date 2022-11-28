@@ -26,8 +26,7 @@
 *,
 *:after,
 *:before {
-        font-family: 'EB Garamond', serif;
-        font-family: 'Montserrat', sans-serif;
+       
         -o-box-sizing: border-box;
         -ms-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -36,9 +35,10 @@
 }
 
 html {
-        font-size: 1rem;
-        line-height: 1.5em;
+        font: 1rem 'EB Garamond', serif;
+        line-height: 2em;
         text-align: center;
+        color: #00515D;
 }
 
 @media screen and (min-width: 768px) {
@@ -52,19 +52,117 @@ html {
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 
+h1,
+h2,
+a {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+}
+
+h1,
+p b {
+        font-size: 2.3rem;
+        line-height: 3.5rem;    
+}
+
+h1,
+a,
+main p a {
+        color: #fff;
+}
+
+h2,
+blockquote footer p,
+blockquote p b {
+        color: #BDBDBD;
+}
+
+blockquote > p:nth-child(2),
+blockquote,
+img {
+        margin: 0;
+}
 
 /* ----- TYPOGRAPHY ----- */ 
+
+
+h2 {
+        font-size: 1rem;
+        margin-bottom: 0;
+}
+
+p i {
+        font-size: 2.5rem;       
+}
+
+span {
+        font-size: 0.75rem;
+}
+
+span a:hover {
+        background-color: #BDBDBD;
+}
+
+blockquote {
+        border-top: 2px #BDBDBD solid;
+        border-bottom: 2px #BDBDBD solid;  
+}
+
+blockquote p b {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 5rem;
+}
+
+img {
+        text-align: left;
+}
+
+a {
+        text-decoration: none;
+}
+
+main p a {
+        background-color:#4e9374;
+        padding: 0.75em;
+        border-radius: 8em;
+        
+}
+
+main p a:hover {
+        background-color: #1d6d49;
+}
+
+main > p:first-child {
+        font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
 
 
 
 
 
 @media screen and (min-width: 768px) {
+
+
         
 }
 
 @media screen and (min-width: 1024px) {
+
+        h1, 
+        p b {
+                font-size: 4.5rem;
+                line-height: 5.5rem; }
+
         
+       
 }
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -256,87 +354,95 @@ html {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
-header p b,
-h1,
-h2,
-a {
-        text-transform: uppercase;
+#about div:last-child > p,
+#take-action div:first-child p {
+        font-size: 1.5rem;
 } 
 
-img,
-#about nav ul,
-#about h2,
-#about li,
-#mission {
-        text-align: left;
-}
-
-header nav ul {
-        text-align: center;
-}
-
-#home p:first-child,
-#home div:first-child {
-        margin: 0;
-}
-
-#hero-home p:last-child a,
-main p a {
-        background-color:#4e9374;
-        padding: 0.75em;
-        border-radius: 8em;
-}
-
-#hero-home p:last-child a:hover,
-main p a:hover {
-        background-color: #1d6d49;
-}
-
-
-h2,
-#about nav ul,
-blockquote footer p {
-        color: #BDBDBD;
-}
-
-h1,
-a,
-#hero-home p,
-main p a {
-        color: #fff;
-}
-
-
-
-
-/* ----- NAVAGATION ----- */
 header li,
 footer li {
         display: inline-block;
         margin-right: 1.25em;
 }
 
-header nav li:last-child a{
-        border: 1px #fff solid;
-        padding: 0.5em;
+#about h2,
+#about li,
+#mission {
+        text-align: left;
+}
+
+#home div:first-child,
+#home p:first-child,
+#hero-home h1 {
+        margin: 0;
+}
+
+header b,
+footer {
+        font-family: 'Montserrat', sans-serif;
+}
+
+#home > div:last-child,
+#home {
+        margin-top: 2.5em;
+}
+
+#hero-home p:last-child a {
+        background-color:#4e9374;
+        padding: 0.75em;
         border-radius: 8em;
 }
 
-header nav li:last-child a:hover {
-        background-color: #fff;
-        color: #4e9374;
+#hero-home p:last-child a:hover {
+        background-color: #1d6d49;
+}
+
+#hero-home p {
+        color: #fff;
+}
+
+#home {
+        margin-bottom: 2.5em;
+}
+
+#home section:first-child > div {
+        background: url(../img/hero-grass-mountains.jpg) no-repeat center;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;  
+        padding: 8em;
+}
+
+#home section:last-child > div {
+        background: url(../img/hero-tall-trees.jpg) no-repeat center;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;  
+        padding: 8em;
+}
+
+#about a {
+        color: #BDBDBD;
 }
 
 
-header nav a:hover,
-address a:hover {
-        border-bottom: 1px #fff solid;
-        padding-bottom: 0.25em;
+
+
+/* ----- NAVAGATION ----- */
+header nav ul {
+        text-align: center;
 }
 
-a {
-        text-decoration: none;
-        font-size: 0.75rem;
+main nav li {
+        display: inline-block;
+}
+
+main nav li:first-child {
+        display: block;
 }
 
 li {
@@ -347,12 +453,23 @@ ul {
         padding-left: 0;
 }
 
-
-
-
+#about li:first-child {
+        color: #1d6d49;
+        text-align: center;
+}
 
 
 /* ----- HERO ----- */
+
+header p b {
+        text-transform: uppercase;
+} 
+
+header:first-child .row {
+        align-items: center;
+        justify-content: center;
+} 
+
 #hero-home {
         background: url(../img/hero-snow-mountains.jpg) no-repeat center;
         -moz-background-size: cover;
@@ -388,18 +505,15 @@ ul {
 
 /* ----- FOOTER ----- */
 
-footer {
+body > footer {
         background-color: #1d6d49; 
-        padding: 0.75em 0;
+        padding-bottom: 0.75em;
 }
 
 footer > div:first-child {
         background-color: #4e9374;
-        padding: 0.75em 0;
-}       
-
-
-
+        margin-bottom: 2em;
+}        
 
 
 
@@ -408,8 +522,48 @@ footer > div:first-child {
 }
 
 @media screen and (min-width: 1024px) {     /* ----- LARGE ----- */
-        #about p {
+        #about p:first-child,
+        #about nav ul,
+        #about li:first-child {
                 text-align: left;
+        }
+        
+
+/* ----- HERO ----- */
+
+        header:first-child .row {
+                justify-content: space-between;
+        }
+
+
+/* ----- NAVAGATION ----- */
+
+        main nav li:first-child,
+        main nav li  {
+                display: block;
+        }
+
+        header nav li:last-child a {
+                border: 1px #fff solid;
+                padding: 0.5em;
+                border-radius: 8em;
+        }
+        
+        header nav li:last-child a:hover {
+                background-color: #fff;
+                color: #4e9374;
+        }
+        
+        
+        header nav a:hover,
+        address a:hover {
+                border-bottom: 1px #fff solid;
+                padding-bottom: 0.25em;
+        }
+        
+        a {
+                text-decoration: none;
+                font-size: 0.75rem;
         }
 
         header nav ul {
