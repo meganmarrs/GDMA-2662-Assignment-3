@@ -78,9 +78,13 @@ blockquote p b {
 }
 
 blockquote > p:nth-child(2),
-blockquote,
-img {
+blockquote {
         margin: 0;
+}
+
+blockquote,
+blockquote > p:first-child {
+        text-align: center;
 }
 
 /* ----- TYPOGRAPHY ----- */ 
@@ -92,20 +96,23 @@ h2 {
 }
 
 p i {
-        font-size: 2.5rem;       
+        font-size: 2.75rem;       
 }
 
 span {
+        color: #fff;
         font-size: 0.75rem;
 }
 
 span a:hover {
-        background-color: #BDBDBD;
+        color: #BDBDBD;
 }
 
 blockquote {
         border-top: 2px #BDBDBD solid;
-        border-bottom: 2px #BDBDBD solid;  
+        border-bottom: 2px #BDBDBD solid; 
+        width: 100%; 
+        margin: 3em 0;
 }
 
 blockquote p b {
@@ -139,15 +146,6 @@ main > p:first-child {
 
 
 
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 768px) {
 
 
@@ -160,7 +158,6 @@ main > p:first-child {
         p b {
                 font-size: 4.5rem;
                 line-height: 5.5rem; }
-
         
        
 }
@@ -359,10 +356,26 @@ main > p:first-child {
         font-size: 1.5rem;
 } 
 
+#mission,
+#achievements {
+        margin-top: 3em;
+}
+
+#about nav,
+#about div:last-child > p,
+#take-action div:last-child  {
+        margin-top: 2.5em;
+}
+
 header li,
 footer li {
         display: inline-block;
         margin-right: 1.25em;
+}
+
+#about nav li:first-child,
+header nav ul {
+        text-align: center;
 }
 
 #about h2,
@@ -406,7 +419,7 @@ footer {
 }
 
 #home section:first-child > div {
-        background: url(../img/hero-grass-mountains.jpg) no-repeat center;
+        background: url(../img/bg-grass-mountains.jpg) no-repeat center;
         -moz-background-size: cover;
         -webkit-background-size: cover;
         -o-background-size: cover;
@@ -416,7 +429,7 @@ footer {
 }
 
 #home section:last-child > div {
-        background: url(../img/hero-tall-trees.jpg) no-repeat center;
+        background: url(../img/bg-tall-trees.jpg) no-repeat center;
         -moz-background-size: cover;
         -webkit-background-size: cover;
         -o-background-size: cover;
@@ -432,9 +445,14 @@ footer {
 
 
 
+
 /* ----- NAVAGATION ----- */
-header nav ul {
-        text-align: center;
+header nav li:last-child a {
+        background-color: #fff;
+        color: #1d6d49;
+        padding: 0.5em;
+        border-radius: 8em;
+
 }
 
 main nav li {
@@ -453,9 +471,8 @@ ul {
         padding-left: 0;
 }
 
-#about li:first-child {
+#about nav li:first-child {
         color: #1d6d49;
-        text-align: center;
 }
 
 
@@ -465,13 +482,8 @@ header p b {
         text-transform: uppercase;
 } 
 
-header:first-child .row {
-        align-items: center;
-        justify-content: center;
-} 
-
 #hero-home {
-        background: url(../img/hero-snow-mountains.jpg) no-repeat center;
+        background: url(../img/bg-snow-mountains.jpg) no-repeat center;
         -moz-background-size: cover;
         -webkit-background-size: cover;
         -o-background-size: cover;
@@ -481,7 +493,7 @@ header:first-child .row {
 }
 
 #hero-about {
-        background: url(../img/hero-grass-mountains.jpg) no-repeat center;
+        background: url(../img/bg-grass-mountains.jpg) no-repeat center;
         -moz-background-size: cover;
         -webkit-background-size: cover;
         -o-background-size: cover;
@@ -491,7 +503,7 @@ header:first-child .row {
 }
 
 #hero-take-action {
-        background: url(../img/hero-tall-trees.jpg) no-repeat center;
+        background: url(../img/bg-tall-trees.jpg) no-repeat center;
         -moz-background-size: cover;
         -webkit-background-size: cover;
         -o-background-size: cover;
@@ -508,6 +520,7 @@ header:first-child .row {
 body > footer {
         background-color: #1d6d49; 
         padding-bottom: 0.75em;
+        margin-top: 2.5em;
 }
 
 footer > div:first-child {
@@ -518,23 +531,16 @@ footer > div:first-child {
 
 
 @media screen and (min-width: 768px) {     /* ----- MEDIUM ----- */
+
         
 }
 
 @media screen and (min-width: 1024px) {     /* ----- LARGE ----- */
-        #about p:first-child,
+        .intro-paragraph, 
         #about nav ul,
         #about li:first-child {
                 text-align: left;
         }
-        
-
-/* ----- HERO ----- */
-
-        header:first-child .row {
-                justify-content: space-between;
-        }
-
 
 /* ----- NAVAGATION ----- */
 
@@ -544,6 +550,8 @@ footer > div:first-child {
         }
 
         header nav li:last-child a {
+                background-color: transparent;
+                color: #fff;
                 border: 1px #fff solid;
                 padding: 0.5em;
                 border-radius: 8em;
@@ -553,9 +561,12 @@ footer > div:first-child {
                 background-color: #fff;
                 color: #4e9374;
         }
+
+        header nav a:hover {
+                text-decoration: none;
+        }
         
         
-        header nav a:hover,
         address a:hover {
                 border-bottom: 1px #fff solid;
                 padding-bottom: 0.25em;
@@ -568,6 +579,10 @@ footer > div:first-child {
 
         header nav ul {
                 text-align: right;
+        }
+
+        #about nav li:first-child {
+                text-align: left;
         }
 }
 
