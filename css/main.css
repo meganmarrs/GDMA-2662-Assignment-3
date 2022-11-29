@@ -73,8 +73,9 @@ main p a {
 
 h2,
 blockquote footer p,
-blockquote p b {
-        color: #BDBDBD;
+blockquote p b,
+span a:hover {
+        color: #BDBDBD;  
 }
 
 blockquote > p:nth-child(2),
@@ -86,6 +87,8 @@ blockquote,
 blockquote > p:first-child {
         text-align: center;
 }
+
+
 
 /* ----- TYPOGRAPHY ----- */ 
 
@@ -104,20 +107,25 @@ span {
         font-size: 0.75rem;
 }
 
-span a:hover {
-        color: #BDBDBD;
-}
-
 blockquote {
         border-top: 2px #BDBDBD solid;
         border-bottom: 2px #BDBDBD solid; 
         width: 100%; 
         margin: 3em 0;
+        padding: 3em;
 }
 
 blockquote p b {
         font-family: 'Montserrat', sans-serif;
         font-size: 5rem;
+        position: absolute;
+        top: -55px;   /* ----- it wont let me put left:0 without it shifting :(----- */         
+}
+
+blockquote > p:first-child {
+        position: relative;
+        top: 0;
+        left: 0;
 }
 
 img {
@@ -126,6 +134,10 @@ img {
 
 a {
         text-decoration: none;
+}
+
+header + p {
+        margin-top: 0;
 }
 
 main p a {
@@ -142,8 +154,6 @@ main p a:hover {
 main > p:first-child {
         font-size: 1.5rem;
 }
-
-
 
 
 @media screen and (min-width: 768px) {
@@ -384,10 +394,20 @@ header nav ul {
         text-align: left;
 }
 
+#about nav li:first-child,
+header nav li:last-child a {
+        color: #1d6d49;
+}
+
 #home div:first-child,
 #home p:first-child,
 #hero-home h1 {
         margin: 0;
+}
+
+#home > div:last-child,
+#home {
+        margin-top: 2.5em;
 }
 
 header b,
@@ -395,9 +415,8 @@ footer {
         font-family: 'Montserrat', sans-serif;
 }
 
-#home > div:last-child,
-#home {
-        margin-top: 2.5em;
+#about a {
+        color: #BDBDBD;
 }
 
 #hero-home p:last-child a {
@@ -438,18 +457,37 @@ footer {
         padding: 8em;
 }
 
-#about a {
-        color: #BDBDBD;
+
+#achievements li::before {
+        background: url(../img/bullet-tree.jpg) no-repeat;
+        -moz-background-size: contain;
+        -webkit-background-size: contain;
+        -o-background-size: contain;
+        -ms-background-size: contain;
+        background-size: contain;  
+        content: "";
+        display: block;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 5px;
+        left: -20px;
 }
 
+#achievements li {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 1em;
+}
 
-
-
+#achievements div:last-child {
+        margin-left: 1rem;
+}
 
 /* ----- NAVAGATION ----- */
 header nav li:last-child a {
         background-color: #fff;
-        color: #1d6d49;
         padding: 0.5em;
         border-radius: 8em;
 
@@ -469,10 +507,6 @@ li {
 
 ul {
         padding-left: 0;
-}
-
-#about nav li:first-child {
-        color: #1d6d49;
 }
 
 
@@ -513,8 +547,6 @@ header p b {
 }
 
 
-
-
 /* ----- FOOTER ----- */
 
 body > footer {
@@ -536,18 +568,24 @@ footer > div:first-child {
 }
 
 @media screen and (min-width: 1024px) {     /* ----- LARGE ----- */
-        .intro-paragraph, 
+        #what-we-do .intro-paragraph, 
         #about nav ul,
-        #about li:first-child {
+        #about li:first-child,
+        #about nav li:first-child  {
                 text-align: left;
         }
 
-/* ----- NAVAGATION ----- */
+        a,
+        header nav a:hover {
+                text-decoration: none;
+        }
 
         main nav li:first-child,
         main nav li  {
                 display: block;
         }
+
+/* ----- NAVAGATION ----- */
 
         header nav li:last-child a {
                 background-color: transparent;
@@ -561,11 +599,6 @@ footer > div:first-child {
                 background-color: #fff;
                 color: #4e9374;
         }
-
-        header nav a:hover {
-                text-decoration: none;
-        }
-        
         
         address a:hover {
                 border-bottom: 1px #fff solid;
@@ -573,16 +606,11 @@ footer > div:first-child {
         }
         
         a {
-                text-decoration: none;
                 font-size: 0.75rem;
         }
 
         header nav ul {
                 text-align: right;
-        }
-
-        #about nav li:first-child {
-                text-align: left;
         }
 }
 
@@ -608,5 +636,8 @@ footer > div:first-child {
         justify-content: center;
 }
 
+.intro-paragraph {
+        text-align: center;
+}
 
 
