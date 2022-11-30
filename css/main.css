@@ -73,14 +73,14 @@ main p a {
 
 h2,
 blockquote footer p,
-blockquote p b,
-span a:hover {
+blockquote p b {
         color: #BDBDBD;  
 }
 
 blockquote > p:nth-child(2),
 blockquote {
         margin: 0;
+        font-size: 1.2rem;
 }
 
 blockquote,
@@ -102,30 +102,31 @@ p i {
         font-size: 2.75rem;       
 }
 
-span {
-        color: #fff;
-        font-size: 0.75rem;
-}
-
 blockquote {
         border-top: 2px #BDBDBD solid;
         border-bottom: 2px #BDBDBD solid; 
         width: 100%; 
-        margin: 3em 0;
-        padding: 3em;
+        margin: 2.5em 0;
+        padding-top: 4em;
+        padding-bottom: 2em;
 }
 
 blockquote p b {
         font-family: 'Montserrat', sans-serif;
         font-size: 5rem;
         position: absolute;
-        top: -55px;   /* ----- it wont let me put left:0 without it shifting :(----- */         
+        top: -55px;
+        left: calc(50% - 39.85px);           
 }
 
 blockquote > p:first-child {
         position: relative;
         top: 0;
         left: 0;
+}
+
+blockquote p:last-child {
+        font-size: 0.85rem;
 }
 
 img {
@@ -361,20 +362,10 @@ main > p:first-child {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
-#about div:last-child > p,
-#take-action div:first-child p {
-        font-size: 1.5rem;
-} 
-
 #mission,
-#achievements {
+#achievements,
+main > nav {
         margin-top: 3em;
-}
-
-#about nav,
-#about div:last-child > p,
-#take-action div:last-child  {
-        margin-top: 2.5em;
 }
 
 header li,
@@ -383,30 +374,36 @@ footer li {
         margin-right: 1.25em;
 }
 
-#about nav li:first-child,
+main > nav li:first-child,
 header nav ul {
         text-align: center;
 }
 
-#about h2,
-#about li,
-#mission {
+main > h2,
+#mission,
+#achievements div:last-child,
+main > nav li {
         text-align: left;
 }
 
-#about nav li:first-child,
+main > nav li:first-child,
 header nav li:last-child a {
         color: #1d6d49;
 }
 
-#home div:first-child,
-#home p:first-child,
-#hero-home h1 {
+#bg-snow-mountains,
+header#bg-grass-mountain,
+header#bg-tall-trees {
+        padding-bottom: 10em; 
+}
+
+.intro-paragraph div:first-child,
+.intro-paragraph,
+#bg-snow-mountains h1 {
         margin: 0;
 }
 
-#home > div:last-child,
-#home {
+main {
         margin-top: 2.5em;
 }
 
@@ -415,48 +412,9 @@ footer {
         font-family: 'Montserrat', sans-serif;
 }
 
-#about a {
+main > nav a {
         color: #BDBDBD;
 }
-
-#hero-home p:last-child a {
-        background-color:#4e9374;
-        padding: 0.75em;
-        border-radius: 8em;
-}
-
-#hero-home p:last-child a:hover {
-        background-color: #1d6d49;
-}
-
-#hero-home p {
-        color: #fff;
-}
-
-#home {
-        margin-bottom: 2.5em;
-}
-
-#home section:first-child > div {
-        background: url(../img/bg-grass-mountains.jpg) no-repeat center;
-        -moz-background-size: cover;
-        -webkit-background-size: cover;
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        background-size: cover;  
-        padding: 8em;
-}
-
-#home section:last-child > div {
-        background: url(../img/bg-tall-trees.jpg) no-repeat center;
-        -moz-background-size: cover;
-        -webkit-background-size: cover;
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        background-size: cover;  
-        padding: 8em;
-}
-
 
 #achievements li::before {
         background: url(../img/bullet-tree.jpg) no-repeat;
@@ -493,11 +451,12 @@ header nav li:last-child a {
 
 }
 
-main nav li {
+main > nav li {
         display: inline-block;
+        margin-left: 0.75em;
 }
 
-main nav li:first-child {
+main > nav li:first-child {
         display: block;
 }
 
@@ -516,7 +475,7 @@ header p b {
         text-transform: uppercase;
 } 
 
-#hero-home {
+#bg-snow-mountains {
         background: url(../img/bg-snow-mountains.jpg) no-repeat center;
         -moz-background-size: cover;
         -webkit-background-size: cover;
@@ -526,28 +485,56 @@ header p b {
         padding-bottom: 10em; 
 }
 
-#hero-about {
+#bg-snow-mountains p:last-child a {
+        background-color:#4e9374;
+        padding: 0.75em;
+        border-radius: 8em;
+}
+
+#bg-snow-mountains p:last-child a:hover {
+        background-color: #1d6d49;
+}
+
+#bg-snow-mountains p {
+        color: #fff;
+}
+
+#bg-grass-mountain {
         background: url(../img/bg-grass-mountains.jpg) no-repeat center;
         -moz-background-size: cover;
         -webkit-background-size: cover;
         -o-background-size: cover;
         -ms-background-size: cover;
-        background-size: cover;  
-        padding-bottom: 10em; 
+        background-size: cover; 
+        padding-bottom: 14em;
 }
 
-#hero-take-action {
+
+
+#bg-tall-trees {
         background: url(../img/bg-tall-trees.jpg) no-repeat center;
         -moz-background-size: cover;
         -webkit-background-size: cover;
         -o-background-size: cover;
         -ms-background-size: cover;
         background-size: cover;  
-        padding-bottom: 10em; 
+        padding-bottom: 14em;
+}
+
+#bg-tall-trees + main div:last-child {
+        margin-bottom: 2.5em;
 }
 
 
 /* ----- FOOTER ----- */
+footer div.wrapper a {
+        color: #F2F2F1; 
+        font-size: 0.75rem;
+}
+
+footer div.wrapper a:hover {
+        color: #fff;
+}
 
 body > footer {
         background-color: #1d6d49; 
@@ -569,9 +556,9 @@ footer > div:first-child {
 
 @media screen and (min-width: 1024px) {     /* ----- LARGE ----- */
         #what-we-do .intro-paragraph, 
-        #about nav ul,
-        #about li:first-child,
-        #about nav li:first-child  {
+        #what-we-do nav ul,
+        #what-we-do li:first-child,
+        main > nav li:first-child  {     /* ----- HELP the ID wont change why? ----- */
                 text-align: left;
         }
 
@@ -638,6 +625,9 @@ footer > div:first-child {
 
 .intro-paragraph {
         text-align: center;
+        font-size: 1.5rem;
+        margin-top: 2.5em;
 }
+
 
 
