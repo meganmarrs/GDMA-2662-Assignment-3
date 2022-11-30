@@ -156,22 +156,13 @@ main > p:first-child {
         font-size: 1.5rem;
 }
 
-
-@media screen and (min-width: 768px) {
-
-
-        
-}
-
 @media screen and (min-width: 1024px) {
-
         h1, 
         p b {
                 font-size: 4.5rem;
-                line-height: 5.5rem; }
-        
-       
+                line-height: 5.5rem; } 
 }
+
 /*--------------------------------------------------------------
     5.0 - OBJECTS
 -------------------------------------------------------------- */
@@ -357,7 +348,6 @@ main > p:first-child {
         }
 }
 
-
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
@@ -371,7 +361,7 @@ main > nav {
 header li,
 footer li {
         display: inline-block;
-        margin-right: 1.25em;
+        margin-left: 1.25em;
 }
 
 main > nav li:first-child,
@@ -412,9 +402,7 @@ footer {
         font-family: 'Montserrat', sans-serif;
 }
 
-main > nav a {
-        color: #BDBDBD;
-}
+
 
 #achievements li::before {
         background: url(../img/bullet-tree.jpg) no-repeat;
@@ -444,6 +432,7 @@ main > nav a {
 }
 
 /* ----- NAVAGATION ----- */
+
 header nav li:last-child a {
         background-color: #fff;
         padding: 0.5em;
@@ -453,7 +442,7 @@ header nav li:last-child a {
 
 main > nav li {
         display: inline-block;
-        margin-left: 0.75em;
+        margin-right: 0.75em;
 }
 
 main > nav li:first-child {
@@ -466,6 +455,18 @@ li {
 
 ul {
         padding-left: 0;
+}
+
+main > nav a {
+        color: #BDBDBD;
+}
+
+main > nav {
+        background-color: #fff;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
 }
 
 
@@ -550,15 +551,21 @@ footer > div:first-child {
 
 
 @media screen and (min-width: 768px) {     /* ----- MEDIUM ----- */
+        main div:last-child.row {
+                justify-content: center;
+        }
 
-        
+        /* ----- NAVAGATION ----- */
+        header nav.row {
+                flex-direction: row-reverse;
+        }
 }
 
 @media screen and (min-width: 1024px) {     /* ----- LARGE ----- */
         #what-we-do .intro-paragraph, 
         #what-we-do nav ul,
         #what-we-do li:first-child,
-        main > nav li:first-child  {     /* ----- HELP the ID wont change why? ----- */
+        main > nav li:first-child  { 
                 text-align: left;
         }
 
@@ -573,6 +580,7 @@ footer > div:first-child {
         }
 
 /* ----- NAVAGATION ----- */
+
 
         header nav li:last-child a {
                 background-color: transparent;
