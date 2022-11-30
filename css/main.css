@@ -162,7 +162,6 @@ main > p:first-child {
                 font-size: 4.5rem;
                 line-height: 5.5rem; } 
 }
-
 /*--------------------------------------------------------------
     5.0 - OBJECTS
 -------------------------------------------------------------- */
@@ -348,6 +347,7 @@ main > p:first-child {
         }
 }
 
+
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
@@ -361,7 +361,7 @@ main > nav {
 header li,
 footer li {
         display: inline-block;
-        margin-left: 1.25em;
+        margin-left: 2.25em;
 }
 
 main > nav li:first-child,
@@ -402,8 +402,6 @@ footer {
         font-family: 'Montserrat', sans-serif;
 }
 
-
-
 #achievements li::before {
         background: url(../img/bullet-tree.jpg) no-repeat;
         -moz-background-size: contain;
@@ -432,6 +430,9 @@ footer {
 }
 
 /* ----- NAVAGATION ----- */
+header nav.row {
+        justify-content: center;
+}
 
 header nav li:last-child a {
         background-color: #fff;
@@ -569,6 +570,11 @@ footer > div:first-child {
                 text-align: left;
         }
 
+        header li,
+        footer li {
+        margin-left: 1.25em;
+}
+
         a,
         header nav a:hover {
                 text-decoration: none;
@@ -580,7 +586,6 @@ footer > div:first-child {
         }
 
 /* ----- NAVAGATION ----- */
-
 
         header nav li:last-child a {
                 background-color: transparent;
@@ -594,6 +599,8 @@ footer > div:first-child {
                 background-color: #fff;
                 color: #4e9374;
         }
+
+        
         
         address a:hover {
                 border-bottom: 1px #fff solid;
@@ -604,9 +611,7 @@ footer > div:first-child {
                 font-size: 0.75rem;
         }
 
-        header nav ul {
-                text-align: right;
-        }
+        
 }
 
 
